@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game Mario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body onresize="adjustWindow()">
+    <audio autoplay loop>
+        <source src="_audios/mapa.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+    <div class="painel">
+        <div class="vidas"></div>
+        <img id="v1" src="_imagens/coracao_cheio.png">
+        <img id="v2" src="_imagens/coracao_cheio.png">
+        <img id="v3" src="_imagens/coracao_cheio.png">
+        <br>
+        <img class="coin" src="_imagens/coin.gif">
+        <span id="pontos" class="coins"></span>
+
+
+        <div class="cronomotreo">Tempo restante:
+            <span id="tempo"></span>
+        </div>
+    </div>
+    <script>
+        document.getElementById('pontos').innerHTML = pontos;
+        document.getElementById("tempo").innerHTML = tempo;
+        var criarKoopa = setInterval(function () {
+            createEnemy()
+        }, koopaTime) //setar tempo de cada inimigo
+    </script>
+
+
+</body>
+
+</html>
